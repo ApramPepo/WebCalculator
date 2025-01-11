@@ -1,0 +1,45 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 3vw;
+    padding: 10px;
+    font-weight: bold;
+    background-color: rgb(252, 167, 63);
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    font-size: 1vw;
+    background-color: coral;
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    background-color: blueviolet;
+    padding: 1.5rem;
+}
+
+#display {
+    height: 2vw;
+    width: 10vw;
+}
