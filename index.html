@@ -6,27 +6,41 @@
     <title>Calculator</title>
     <link rel="stylesheet" href="main.css">
     <script src="main.js" defer></script>
+    <link rel="shortcut icon" href="https://cdn.iconscout.com/icon/free/png-256/free-calculator-icon-download-in-svg-png-gif-file-formats--account-accounting-calculation-e-commerce-pack-shopping-icons-1794991.png" type="image/x-icon">
 </head>
 <body>
     <!-- Make a header stating the purpose of the page -->
-    <header>This is a JavaScript Calculator made in JS version ES2023</header>
+    <header>This is a JavaScript Calculator made in JS version ES2023 - and Flexbox</header>
 
     <!-- Calculator -->
     <section id="container">
-        <input id="display" readonly>
+        <input id="display" readonly value="0">
         <div id="keys">
             <div id="upper">
-                
+                <button class="btn-upper btn-seven" data-number>7</button>
+                <button class="btn-upper btn-eigh" data-number>8</button>
+                <button class="btn-upper btn-nine" data-number>9</button>
+                <button class="btn-upper btn-add" data-ops>+</button>
             </div>
             <div id="middle">
-
+                <button class="btn-middle btn-four" data-number>4</button>
+                <button class="btn-middle btn-five" data-number>5</button>
+                <button class="btn-middle btn-six" data-number>6</button>
+                <button class="btn-middle btn-sub" data-ops>-</button>
             </div>
             <div id="lower">
-                
+                <button class="btn-lower btn-one" data-number>1</button>
+                <button class="btn-lower btn-two" data-number>2</button>
+                <button class="btn-lower btn-three" data-number>3</button>
+                <button class="btn-lower btn-multi" data-ops>x</button>
             </div>
             <div id="bottom">
-                
+                <button class="btn-bottom btn-zero" data-number>0</button>
+                <button class="btn-bottom btn-dot" data-number>.</button>
+                <button class="btn-bottom btn-clear" data-clear>AC</button>
+                <button class="btn-bottom btn-divide" data-ops>/</button>
             </div>
+            <button class="equal" data-equal>=</button>
         </div>
     </section>
 

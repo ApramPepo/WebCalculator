@@ -33,13 +33,41 @@ footer {
 
 #container {
     display: flex;
-    justify-content: center;
+    align-items: center;
     flex-grow: 1;
     background-color: blueviolet;
     padding: 1.5rem;
+    flex-direction: column;
 }
 
 #display {
-    height: 2vw;
-    width: 10vw;
+    height: 3vw;
+    width: 30vw;
+    margin: 2rem;
+    font-size: xx-large;
+    border-radius: 0.5vw;
+}
+
+#keys {
+    display: flex;
+    flex-direction: column;
+    gap: 0.12rem;
+}
+
+button {
+    width: 7.5vw;
+    height: 7.5vw;
+    cursor: pointer;
+    font-size: xx-large;
+    font-weight: bold;
+    margin: 0.06rem;
+}
+
+.equal {
+    width: 100%;
+}
+
+input {
+    text-align: right;
+    padding-right: 10px;
 }
