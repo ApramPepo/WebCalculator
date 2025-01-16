@@ -124,6 +124,9 @@ numbers.forEach((button) => {
         if (display.value == 0) {
             display.value = '';
         }
+        if (display.value == 0 && !oper) {
+            display.value = '';
+        }
         display.value += button.textContent;
         setNumbers(button.textContent);
     });
@@ -133,7 +136,7 @@ operators.forEach((button) => {
     button.addEventListener('click', () => {
         if (checkOper()) {
             setOper(button.textContent);
-            display.value = button.textContent;
+            display.value = 0;
         }
     });
 });
@@ -146,5 +149,9 @@ equals.addEventListener('click', () => {
         oper = '';
     }
 });
+
+window.addEventListener('load', () => {
+    zero();
+})
 
 
