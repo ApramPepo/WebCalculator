@@ -154,4 +154,36 @@ window.addEventListener('load', () => {
     zero();
 })
 
-
+document.addEventListener('keydown', (event) => {
+    const key = event.key;
+    if (key >= '0' && key <= '9') {
+        if (display.value == 0) {
+            display.value = '';
+        }
+        if (display.value == 0 && !oper) {
+            display.value = '';
+        }
+        display.value += key;
+        setNumbers(key);
+    }
+    else if (key === '+' || key === '-' || key === '*' || key === '/') {
+        if (checkOper()) {
+            setOper(key);
+            display.value = 0;
+        }
+    }
+    else if (key === 'Enter') {
+        if (check()) {
+            display.value = operate(num1, oper, num2);
+            num1 = display.value;
+            num2 = '';
+            oper = '';
+        }
+    }
+    else if (key === 'Backspace') {
+        backspace();
+    }
+    else if (key === '.') {
+        checkDecimal();
+    }
+});
