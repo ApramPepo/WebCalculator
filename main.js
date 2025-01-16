@@ -62,15 +62,13 @@ function setNumbers(num) {
 }
 
 function checkOper() {
-    if (!oper) {
-        return;
-    }
-    return false;
+    return !oper;
 }
 
 function setOper(operator) {
     if (num1 && !oper) {
-        oper = operator;
+        oper = operator === 'x' ? '*' : operator;
+        display.value += `${operator}`
     }
     decimal = false;
 }
@@ -121,7 +119,32 @@ backspce.addEventListener('click', () => {
     backspace();
 });
 
-let nine = document.querySelector('.btn-nine');
-nine.addEventListener('click, () => {
-    display.value += 9;
+numbers.forEach((button) => {
+    button.addEventListener('click', () => {
+        if (display.value == 0) {
+            display.value = '';
+        }
+        display.value += button.textContent;
+        setNumbers(button.textContent);
+    });
 });
+
+operators.forEach((button) => {
+    button.addEventListener('click', () => {
+        if (checkOper()) {
+            setOper(button.textContent);
+            display.value = button.textContent;
+        }
+    });
+});
+
+equals.addEventListener('click', () => {
+    if (check()) {
+        display.value = operate(num1, oper, num2);
+        num1 = display.value;
+        num2 = '';
+        oper = '';
+    }
+});
+
+
