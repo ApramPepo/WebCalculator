@@ -63,11 +63,18 @@ button {
     margin: 0.06rem;
 }
 
-.equal {
-    width: 100%;
-}
-
 input {
     text-align: right;
     padding-right: 10px;
+}
+
+#op {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.12rem;
+}
+
+.equal,
+.bckspce {
+    flex-grow: 1;
 }

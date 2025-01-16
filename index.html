@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
     <link rel="stylesheet" href="main.css">
     <script src="main.js" defer></script>
-    <link rel="shortcut icon" href="https://cdn.iconscout.com/icon/free/png-256/free-calculator-icon-download-in-svg-png-gif-file-formats--account-accounting-calculation-e-commerce-pack-shopping-icons-1794991.png" type="image/x-icon">
+    <link rel="shortcut icon"
+        href="https://cdn.iconscout.com/icon/free/png-256/free-calculator-icon-download-in-svg-png-gif-file-formats--account-accounting-calculation-e-commerce-pack-shopping-icons-1794991.png"
+        type="image/x-icon">
 </head>
+
 <body>
     <!-- Make a header stating the purpose of the page -->
     <header>This is a JavaScript Calculator made in JS version ES2023 - and Flexbox</header>
@@ -40,12 +44,16 @@
                 <button class="btn-bottom btn-clear" data-clear>AC</button>
                 <button class="btn-bottom btn-divide" data-ops>/</button>
             </div>
-            <button class="equal" data-equal>=</button>
+            <div id="op">
+                <button class="equal" data-equal>=</button>
+                <button class="bckspce" data-bckspce>⌫</button>
+            </div>
         </div>
     </section>
 
     <!-- Footer section -->
     <footer>Developed by Abram Adel &copy; The Odin Project</footer>
-    
+
 </body>
+
 </html>
